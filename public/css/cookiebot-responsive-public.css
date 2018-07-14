@@ -1,0 +1,47 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+@media screen and (max-width: 600px) {
+    table.CookieDeclarationTable,
+    table.CybotCookiebotDialogDetailBodyContentCookieTypeTable {
+        border: 0;
+    }
+    table.CookieDeclarationTable thead,
+    table.CybotCookiebotDialogDetailBodyContentCookieTypeTable thead {
+        display: none;
+    }
+    table.CookieDeclarationTable tr,
+    table.CybotCookiebotDialogDetailBodyContentCookieTypeTable tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 5px solid #ddd;
+    }
+    table.CookieDeclarationTable td,
+    table.CybotCookiebotDialogDetailBodyContentCookieTypeTable td {
+        display: block;
+        text-align: right !important;
+        font-size: 13px !important;
+        border-bottom: 1px dotted #ccc !important;
+    }
+    table.CookieDeclarationTable td:last-child,
+    table.CybotCookiebotDialogDetailBodyContentCookieTypeTable td:last-child {
+        border-bottom: 0;
+    }
+    table.CookieDeclarationTable td:before,
+    table.CybotCookiebotDialogDetailBodyContentCookieTypeTable td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .CybotCookiebotDialogDetailBodyContentCookieTypeTable tbody td {
+        max-width: 100% !important;
+    }
+    table.CookieDeclarationTable colgroup col:first-child {
+        width: 100% !important;
+    }
+    table.CookieDeclarationTable colgroup col:not(:first-child) {
+        width: 0 !important;
+    }
+}
