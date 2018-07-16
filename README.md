@@ -5,8 +5,6 @@ If using cookiebot.com the cookie declaration uses tables that does not look ver
 
 This plugin changes the tables styling to better fit narrow devices.
 
-This plugin uses jQuery onmutate plugin from https://github.com/eclecto/jQuery-onMutate
-
 # Installation
 
 Place cookiebot-responsive folder under /wp-content/plugins/ then activate the plugin. The plugin has no settings in admin area
