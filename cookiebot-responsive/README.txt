@@ -4,11 +4,11 @@ Donate link: https://vencu.ro
 Tags: cookiebot, responsive
 Requires at least: 3.0.1
 Tested up to: 4.9
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Applies styling to Cookiebot declaration to make tables in it responsive
+Applies styling to Cookiebot declaration to make tables nicer responsive
 
 == Description ==
 
@@ -18,10 +18,14 @@ Applies styiling to Cookiebot declaration to make tables in it responsive. It ta
 
 This section describes how to install the plugin and get it working.
 
-1. Upload `cookiebot-responsive.php` to the `/wp-content/plugins/` directory
+1. Upload `cookiebot-responsive` subfolder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.1 =
+* Got rid of jquery onmutate plugin, wrote own native function to eliminate dependency
+* the cookies list on privacy policy page are not triggering the observer class. for now there is a temporary fix with 2 seconds timeout after page load
+
+= 1.0.0 =
 * Initial commit

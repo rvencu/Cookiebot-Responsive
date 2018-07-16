@@ -96,8 +96,7 @@ class Cookiebot_Responsive_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name . "-onmutate", plugin_dir_url( __FILE__ ) . 'js/jquery.onmutate.min.js', array( 'jquery' ), $this->version, false );
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cookiebot-responsive-public.js', array( $this->plugin_name . "-onmutate" ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cookiebot-responsive-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 
