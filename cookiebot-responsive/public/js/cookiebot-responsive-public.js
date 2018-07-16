@@ -30,12 +30,14 @@
 	 */
 
     $(document).ready(function() {
-        $(".CookieDeclarationTable tr td").each(function() {
-            $(this).attr("data-label", $('.CookieDeclarationTable th').eq($(this).index()).text());
-        });
         //because consent dialog tables are not present in DOM until the banner is displayed, we need to detect when the tables appear in DOM
         //uses this jQuery plugin https://github.com/eclecto/jQuery-onMutate with onCreate()
         //these tables has td elements in thead instead of th this is why the selector changes from 'th' to 'tr:first-child td'
+        $.onCreate('.CookieDeclarationTable', function(elements) {
+            $(".CookieDeclarationTable tr td").each(function() {
+                $(this).attr("data-label", $('.CookieDeclarationTable th').eq($(this).index()).text());
+            });
+        }, true);
         $.onCreate('.CybotCookiebotDialogDetailBodyContentCookieTypeTable', function(elements) {
             $(".CybotCookiebotDialogDetailBodyContentCookieTypeTable td").each(function() {
                 $(this).attr("data-label", $('.CybotCookiebotDialogDetailBodyContentCookieTypeTable tr:first-child td').eq($(this).index()).text());
