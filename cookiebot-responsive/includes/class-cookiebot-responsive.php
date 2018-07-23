@@ -27,6 +27,7 @@
  * @subpackage Cookiebot_Responsive/includes
  * @author     Richard Vencu <richard@vencu.ro>
  */
+
 class Cookiebot_Responsive {
 
 	/**
