@@ -15,8 +15,8 @@
  * @wordpress-plugin
  * Plugin Name:       Cookiebot Responsive
  * Plugin URI:        https://github.com/rvencu/Cookiebot-Responsive
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
+ * Description:       This plugin will enhance Cookiebot tables responsivness. Just install, no settings required.
+ * Version:           1.1.0
  * Author:            Richard Vencu
  * Author URI:        https://vencu.ro
  * License:           GPL-2.0+
