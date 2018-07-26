@@ -4,7 +4,7 @@ Donate link: https://vencu.ro
 Tags: cookiebot, responsive
 Requires at least: 3.0.1
 Tested up to: 4.9.7
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later. Contains code released under MIT License - see description
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,9 @@ This section describes how to install the plugin and get it working.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 1.1.1 =
+* PLUGIN_NAME_VERSION constant changed to avoid potential conflicts
 
 = 1.1.0 =
 * Use better initializing jQuery plugin based on mutation observer
