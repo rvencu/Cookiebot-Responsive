@@ -2,6 +2,7 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+
 @media screen and (max-width: 600px) {
     table.CookieDeclarationTable,
     table.CybotCookiebotDialogDetailBodyContentCookieTypeTable {
@@ -44,4 +45,13 @@
     table.CookieDeclarationTable colgroup col:not(:first-child) {
         width: 0 !important;
     }
+}
+
+.CybotCookiebotDialogDetailBodyContentCookieTypeTable thead th {
+    background-color: #f6f6f9!important;
+    color: #2a2a2a!important;
+    text-align: left;
+    vertical-align: top;
+    padding: 2px;
+    border-bottom: 1px solid #cccccc;
 }

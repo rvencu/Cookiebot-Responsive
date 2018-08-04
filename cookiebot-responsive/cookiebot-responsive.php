@@ -16,7 +16,7 @@
  * Plugin Name:       Cookiebot Responsive
  * Plugin URI:        https://github.com/rvencu/Cookiebot-Responsive
  * Description:       This plugin will enhance Cookiebot tables responsivness. Just install, no settings required.
- * Version:           1.1.1
+ * Version:           1.2.0
  * Author:            Richard Vencu
  * Author URI:        https://vencu.ro
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'CBRESP_VERSION', '1.1.1' );
+define( 'CBRESP_VERSION', '1.2.0' );
 
 /**
  * The code that runs during plugin activation.

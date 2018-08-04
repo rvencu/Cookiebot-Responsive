@@ -9,7 +9,8 @@
  * This is based on MutationObserver
  * https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
  */
-;(function ($) {
+;
+(function($) {
 
     "use strict";
 
@@ -50,7 +51,7 @@
     }
 
     // MutationSelectorObserver represents a selector and it's associated initialization callback.
-    var MutationSelectorObserver = function (selector, callback, options) {
+    var MutationSelectorObserver = function(selector, callback, options) {
         this.selector = selector.trim();
         this.callback = callback;
         this.options = options;
@@ -60,12 +61,12 @@
 
     // List of MutationSelectorObservers.
     var msobservers = [];
-    msobservers.initialize = function (selector, callback, options) {
+    msobservers.initialize = function(selector, callback, options) {
 
         // Wrap the callback so that we can ensure that it is only
         // called once per element.
         var seen = [];
-        var callbackOnce = function () {
+        var callbackOnce = function() {
             if (seen.indexOf(this) == -1) {
                 seen.push(this);
                 $(this).each(callback);
@@ -80,7 +81,7 @@
         this.push(msobserver);
 
         // The MutationObserver watches for when new elements are added to the DOM.
-        var observer = new MutationObserver(function (mutations) {
+        var observer = new MutationObserver(function(mutations) {
             var matches = [];
 
             // For each mutation.
@@ -126,18 +127,18 @@
 
         // Observe the target element.
         var defaultObeserverOpts = { childList: true, subtree: true, attributes: msobserver.isComplex };
-        observer.observe(options.target, options.observer || defaultObeserverOpts );
+        observer.observe(options.target, options.observer || defaultObeserverOpts);
 
         return observer;
     };
 
     // Deprecated API (does not work with jQuery >= 3.1.1):
-    $.fn.initialize = function (callback, options) {
+    $.fn.initialize = function(callback, options) {
         return msobservers.initialize(this.selector, callback, $.extend({}, $.initialize.defaults, options));
     };
 
     // Supported API
-    $.initialize = function (selector, callback, options) {
+    $.initialize = function(selector, callback, options) {
         return msobservers.initialize(selector, callback, $.extend({}, $.initialize.defaults, options));
     };
 
@@ -148,14 +149,24 @@
     }
 
     //Cookiebot tables initializing
-    $.initialize(".CookieDeclarationTable", function() {
+    $.initialize(".CybotCookiebotDialogDetailBodyContentCookieTypeTable", function() {
         $(this).find('td').each(function() {
-            $(this).attr("data-label", $(this).closest('table').find('tr:first-child').find('th').eq($(this).index()).text());
+            $(this).attr("data-label", $(this).closest('table').find('tr:first-child').eq(0).find('th').eq($(this).index()).text());
         });
     });
-    $.initialize("#CybotCookiebotDialog", function() {
+    $.initialize(".CookieDeclarationTable", function() {
+        //initialize data-label attributes to display column name inside field on small screens
         $(this).find('td').each(function() {
-            $(this).attr("data-label", $(this).closest('table').find('tr:first-child').find('td').eq($(this).index()).text());
+            $(this).attr("data-label", $(this).closest('table').find('tr:first-child').eq(0).find('th').eq($(this).index()).text());
         });
+        //replace the h2 tag from the dialog with strong tag since page title h1 must be first heading tag on the page
+        //this h2 is coming before h1 in the page
+        $(this).find('h2').replaceWith(function () {
+            return "<strong>" + $(this).html() + "</strong>";
+        });
+        //this table lacks th inside thead, here is an attempt to repair that
+        /*        $(this).find('thead').find('td').replaceWith(function() {
+                    return "<th>" + $(this).html() + "</th>";
+                });*/
     });
 })(jQuery);

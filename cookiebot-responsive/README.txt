@@ -4,7 +4,7 @@ Donate link: https://vencu.ro
 Tags: cookiebot, responsive
 Requires at least: 3.0.1
 Tested up to: 4.9.7
-Stable tag: 1.1.1
+Stable tag: 1.2.0
 License: GPLv2 or later. Contains code released under MIT License - see description
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,10 @@ This section describes how to install the plugin and get it working.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 1.2.0 =
+* Cookiebot has updated the HTML of declaration tables, this release adapts to these changes
+* The Cookie Dialog starts with an H2 tag, that comes before H1 tag of the page, against best practices. I am changing that H2 into a STRONG tag.
 
 = 1.1.1 =
 * PLUGIN_NAME_VERSION constant changed to avoid potential conflicts
